@@ -1,0 +1,4 @@
+- if @table.is_booked
+  = link_to 'Release', hall_table_release_path(@hall, @table), method: :put
+- else
+  = link_to 'Book', hall_table_book_path(@hall, @table), method: :put

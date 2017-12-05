@@ -1,0 +1,12 @@
+- if @tables.present?
+  ul
+    - @tables.each do |table|
+      li
+        = link_to 'Table', hall_table_path(@hall, table)
+        span &nbsp;
+        = link_to 'Delete', hall_table_path(@hall, table), method: :delete
+        span &nbsp;
+        = table.status
+  br
+  br
+= link_to 'Create Table', hall_tables_path(@hall), method: :post
